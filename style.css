@@ -1,0 +1,54 @@
+:root {
+  --gap: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #222;
+  background: #fafafa;
+}
+
+header, footer {
+  padding: var(--gap) calc(var(--gap) * 2);
+}
+
+header h1 {
+  margin-bottom: 0.3rem;
+}
+
+#controls {
+  padding: 0 calc(var(--gap) * 2) var(--gap);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#controls select {
+  padding: 4px 8px;
+}
+
+/* 🔧 Updated for the new single visualization container */
+#vis {
+  margin: 0 calc(var(--gap) * 2) var(--gap);
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  min-height: 600px; /* Optional: ensures space before render */
+  overflow-x: auto;   /* Handle horizontal scroll on small screens */
+}
+
+#timeline {
+  grid-area: timeline;
+  min-height: 260px;
+  background: white;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}

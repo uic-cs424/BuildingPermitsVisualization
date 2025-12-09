@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Chicago Building Permits — Embedding Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="style.css" rel="stylesheet" />
+
+  <!-- Vega stack -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <header>
+    <h1>Chicago Building Permits — Embedding Explorer</h1>
+    <p>
+      Explore clusters, outliers, and neighborhoods in a 2D embedding (PCA) of building permits from 2020–2025.
+      Brush the embedding to filter the linked views. Click a permit type to highlight it.
+    </p>
+  </header>
+
+  <section id="controls">
+    <label>Year:
+      <select id="yearSelector">
+        <option value="all">All (2020–2025)</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+      </select>
+    </label>
+  </section>
+
+  <!-- 👇 This is the single container for your full visualization -->
+  <main>
+    <div id="vis"></div>
+    <div id="timeline"></div>
+
+  </main>
+
+  <footer>
+    <p>CS424 - Visualization & Visual Analytics (Fall 2025) — Data: Chicago Building Permits.</p>
+  </footer>
+
+  <!-- Your script that generates the full vega-lite spec -->
+  <script src="script.js"></script>
+</body>
+</html>
